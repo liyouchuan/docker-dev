@@ -18,4 +18,4 @@ xhost + $ipaddr
 export DHNT_BASE=~/.dhnt
 export DISPLAY=${ipaddr}:0
 
-docker run --detach $proxy -v ${DHNT_BASE}:/home/vcap -e DISPLAY=${DISPLAY} -it --rm --privileged --name dhnt-bash-$$ dhnt/bash
+docker run $proxy -v ${DHNT_BASE}:/home/vcap -e DISPLAY=${DISPLAY} -it --rm --privileged --name dhnt-bash-$$ dhnt/bash
